@@ -8,6 +8,7 @@ import (
 	"grpc-client/internal/grpc_gen"
 	"grpc-client/internal/grpc_gen/gen"
 	"log"
+	"time"
 )
 
 const GRPC_URL = "localhost:9011"
@@ -30,5 +31,5 @@ func Run() {
 		log.Fatalf("Fuckup grpc: %v", err)
 	}
 
-	fmt.Printf("Response from grpc server: %s\n", response.Message)
+	fmt.Printf("%s | Получено сообщение от сервера: %s\n", time.Now().String(), response.Message)
 }
