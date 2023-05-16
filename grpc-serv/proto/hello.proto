@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "./internal/grpc_gen/gen";
+
+service SayHello {
+  rpc Do(Request) returns (Response) {}
+}
+
+message Request {
+  string message = 1;
+}
+
+message Response {
+  string message = 1;
+}
