@@ -8,7 +8,7 @@ import (
 )
 
 type HelloServerGRPC struct {
-	gen2.UnimplementedSayHelloServer
+	gen2.SayHelloServer
 }
 
 func NewHelloServerGRPC() *HelloServerGRPC {
